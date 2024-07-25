@@ -1,7 +1,6 @@
 import { useTaskStore } from "../store/taskStore"
 import { AddTask } from "./AddTask"
 import { Task } from "./Task"
-import TextInput from "./TextInput"
 
 
 
