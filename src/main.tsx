@@ -10,7 +10,7 @@ import { TabbedTasks } from './components/TabbedTasks.tsx'
 
 const router = createBrowserRouter([
   {
-    path: "/management",
+    path: "/",
     element: <Management />
   },
   {
