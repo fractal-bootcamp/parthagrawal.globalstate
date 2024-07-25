@@ -20,7 +20,7 @@ export const Management = () => {
                 <div className="text-3xl">
                     Task Management
                 </div>
-                <div>
+                <div className="flex flex-col gap-2">
                     {tasks.map((task) => (<Task {...task} />))}
                 </div>
 

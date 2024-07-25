@@ -12,11 +12,22 @@ export const Task = (task: TaskType) => {
 
     const taskStore = useTaskStore();
 
-    const { tasks, deleteTask } = taskStore
+    const { deleteTask } = taskStore
 
     return (
         <div>
-            {task.name}
+            <div className="flex flex-row gap-2 ">
+                <TaskElement content={task.name} />
+                <TaskElement content={task.description} />
+                <TaskElement content={task.status} />
+                <TaskElement content={task.theme} />
+            </div>
         </div>
     )
+}
+
+export const TaskElement = ({ content }: { content: string }) => {
+    return <div className="border-4 border-red-300 rounded-xl p-2">{content}</div>
+
+
 }

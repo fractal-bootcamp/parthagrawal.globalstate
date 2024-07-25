@@ -36,7 +36,6 @@ export const AddTask = () => {
                 [e.target.name]: e.target.value
             }
         })
-
         console.log(newTaskData)
     }
 
