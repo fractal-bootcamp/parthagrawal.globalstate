@@ -47,17 +47,18 @@ export const AddTask = () => {
             <div className="flex flex-row gap-2 ">
 
                 <TextInput name="name" placeholder="Name" onChange={handleChange} />
+                <TextInput name="description" placeholder="Description" onChange={handleChange} />
 
                 {/* <input type="text" name="name" placeholder="Name" onChange={handleChange} className="input input-bordered w-full max-w-xs" /> */}
-                <input type="text" name="description" placeholder="Description" onChange={handleChange} className="input input-bordered w-full max-w-xs" />
-                <select name="status" onChange={handleChange} value={newTaskData.status} className="select select-bordered w-full max-w-xs">
+                {/* <input type="text" name="description" placeholder="Description" onChange={handleChange} className="input input-bordered w-full max-w-xs" /> */}
+                <select name="status" onChange={handleChange} value={newTaskData.status} className="bg-black border-2 border-green-500">
                     <option disabled selected>Status?</option>
                     <option value="Pending">Pending</option>
                     <option value="In Progress">In Progress</option>
                     <option value="Completed">Completed</option>
                     <option value="Archived">Archived</option>
                 </select>
-                <select name="theme" onChange={handleChange} className="select select-bordered w-full max-w-xs">
+                <select name="theme" onChange={handleChange} className="bg-black border-2 border-green-500">
                     <option disabled selected>Theme?</option>
                     <option>light</option>
                     <option>dark</option>
