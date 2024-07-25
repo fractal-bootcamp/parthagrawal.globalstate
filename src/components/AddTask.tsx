@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Task as TaskType, useTaskStore } from "../store/taskStore"
+import TextInput from "./TextInput"
 
 
 
@@ -21,7 +22,7 @@ export const AddTask = () => {
         return currentId;
     }
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
         setNewTaskData((prevValue) => {
             return {
                 ...prevValue,
@@ -45,7 +46,9 @@ export const AddTask = () => {
         <>
             <div className="flex flex-row gap-2 ">
 
-                <input type="text" name="name" placeholder="Name" onChange={handleChange} className="input input-bordered w-full max-w-xs" />
+                <TextInput name="name" placeholder="Name" onChange={handleChange} />
+
+                {/* <input type="text" name="name" placeholder="Name" onChange={handleChange} className="input input-bordered w-full max-w-xs" /> */}
                 <input type="text" name="description" placeholder="Description" onChange={handleChange} className="input input-bordered w-full max-w-xs" />
                 <select name="status" onChange={handleChange} value={newTaskData.status} className="select select-bordered w-full max-w-xs">
                     <option disabled selected>Status?</option>
