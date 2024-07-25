@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Task as TaskType, useTaskStore } from "../store/taskStore"
+import TextInput from "./TextInput"
 
 
 
@@ -21,7 +22,7 @@ export const AddTask = () => {
         return currentId;
     }
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
         setNewTaskData((prevValue) => {
             return {
                 ...prevValue,
@@ -45,16 +46,19 @@ export const AddTask = () => {
         <>
             <div className="flex flex-row gap-2 ">
 
-                <input type="text" name="name" placeholder="Name" onChange={handleChange} className="input input-bordered w-full max-w-xs" />
-                <input type="text" name="description" placeholder="Description" onChange={handleChange} className="input input-bordered w-full max-w-xs" />
-                <select name="status" onChange={handleChange} value={newTaskData.status} className="select select-bordered w-full max-w-xs">
+                <TextInput name="name" placeholder="Name" onChange={handleChange} />
+                <TextInput name="description" placeholder="Description" onChange={handleChange} />
+
+                {/* <input type="text" name="name" placeholder="Name" onChange={handleChange} className="input input-bordered w-full max-w-xs" /> */}
+                {/* <input type="text" name="description" placeholder="Description" onChange={handleChange} className="input input-bordered w-full max-w-xs" /> */}
+                <select name="status" onChange={handleChange} value={newTaskData.status} className="bg-black border-2 border-green-500">
                     <option disabled selected>Status?</option>
                     <option value="Pending">Pending</option>
                     <option value="In Progress">In Progress</option>
                     <option value="Completed">Completed</option>
                     <option value="Archived">Archived</option>
                 </select>
-                <select name="theme" onChange={handleChange} className="select select-bordered w-full max-w-xs">
+                <select name="theme" onChange={handleChange} className="bg-black border-2 border-green-500">
                     <option disabled selected>Theme?</option>
                     <option>light</option>
                     <option>dark</option>
@@ -63,7 +67,7 @@ export const AddTask = () => {
 
                 <button onClick={handleClick} className="min-w-[25px]">
                     <span>
-                        <img src="/plus.svg" alt="Add Task" className="w-10 h-10" />
+                        <img src="/plusorange.png" alt="Add Task" className="w-10 h-auto" />
                     </span>
                 </button>
             </div>
