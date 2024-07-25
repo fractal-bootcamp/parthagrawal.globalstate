@@ -10,7 +10,9 @@ const dummyTask: TaskType = {
 
 export const Task = (task: TaskType) => {
 
-    console.log(task)
+    const taskStore = useTaskStore();
+
+    const { tasks, deleteTask } = taskStore
 
     return (
         <div>
