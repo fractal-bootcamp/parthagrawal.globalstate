@@ -1,6 +1,6 @@
 export const Management = () => {
     return (
-        <div>
+        <div className="text-3xl">
             Management
         </div>
     )
