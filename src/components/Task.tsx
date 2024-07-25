@@ -15,7 +15,7 @@ export const Task = (task: TaskType) => {
 
     return (
         <div>
-            <div className="flex flex-row gap-2 items-center justify-center">
+            <div className="flex flex-row gap-2 items-center border-2 border-green-500 justify-center p-2">
                 <TaskElement content={task.name} />
                 <TaskElement content={task.description} />
                 <TaskElement content={task.status} />
@@ -27,5 +27,5 @@ export const Task = (task: TaskType) => {
 }
 
 export const TaskElement = ({ content }: { content: string }) => {
-    return <div className="border-4 border-red-300 rounded-xl p-2">{content}</div>
+    return <div className="border border-dashed border-green-500 p-2">{content}</div>
 }
