@@ -20,7 +20,7 @@ export const Task = (task: TaskType) => {
                 <TaskElement content={task.description} />
                 <TaskElement content={task.status} />
                 <TaskElement content={task.theme} />
-                <img src="trash.png" onClick={handleDelete} className="w-6 h-auto"></img>
+                <img src="trash-orange.png" onClick={handleDelete} className="w-6 h-auto"></img>
             </div>
         </div>
     )

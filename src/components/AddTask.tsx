@@ -67,7 +67,7 @@ export const AddTask = () => {
 
                 <button onClick={handleClick} className="min-w-[25px]">
                     <span>
-                        <img src="/plus.svg" alt="Add Task" className="w-10 h-10" />
+                        <img src="/plusorange.png" alt="Add Task" className="w-10 h-auto" />
                     </span>
                 </button>
             </div>

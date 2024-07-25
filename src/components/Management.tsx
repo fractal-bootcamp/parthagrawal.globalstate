@@ -24,8 +24,6 @@ export const Management = () => {
 
                 <AddTask />
 
-                <TextInput placeholder="name" />
-
             </div>
         </div>
     )
