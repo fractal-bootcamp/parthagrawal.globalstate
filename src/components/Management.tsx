@@ -1,5 +1,4 @@
-import { useTaskListStore } from "../store/taskListStore"
-import { Status, Task as TaskType, Theme, useTaskStore } from "../store/taskStore"
+import { useTaskStore } from "../store/taskStore"
 import { AddTask } from "./AddTask"
 import { Task } from "./Task"
 
@@ -9,7 +8,7 @@ import { Task } from "./Task"
 
 export const Management = () => {
     const taskStore = useTaskStore()
-    const { tasks, addTask, deleteTask } = taskStore
+    const { tasks } = taskStore
 
 
     return (

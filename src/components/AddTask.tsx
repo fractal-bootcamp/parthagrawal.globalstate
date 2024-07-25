@@ -1,20 +1,12 @@
 import { useState } from "react"
 import { Task as TaskType, useTaskStore } from "../store/taskStore"
 
-const dummyTask: TaskType = {
-    id: 1,
-    name: "Dummy Task",
-    description: "This is a dummy task",
-    status: "In Progress",
-    theme: "dark"
-}
-
 
 
 export const AddTask = () => {
 
     const taskStore = useTaskStore()
-    const { tasks, addTask, deleteTask } = taskStore
+    const { tasks, addTask } = taskStore
 
     const [newTaskData, setNewTaskData] = useState<Omit<TaskType, 'id'>>({
         name: "",

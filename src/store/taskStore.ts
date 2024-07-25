@@ -13,7 +13,7 @@ export type Task = {
 
 export type TaskStore = {
     tasks: Task[]
-    editTask: (editTaskParams: EditTaskParams) => void
+    editTask: (editTaskParams: Task) => void
     addTask: (task: Task) => void
     deleteTask: (taskId: number) => void
 }
