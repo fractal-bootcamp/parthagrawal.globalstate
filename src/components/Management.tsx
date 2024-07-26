@@ -17,7 +17,7 @@ export const Management = () => {
                 <div className="text-3xl">
                     Task Management
                 </div>
-                <div className="flex flex-col border border-dotted border-green-500 px-10 gap-2 h-[400px] min-w-[400px] overflow-y-auto ">
+                <div className="flex flex-col justify-center border border-dotted border-green-500 px-10 gap-2 h-[400px] min-w-[400px] overflow-y-auto ">
                     {tasks.map((task) => (<Task {...task} />))}
                 </div>
 
